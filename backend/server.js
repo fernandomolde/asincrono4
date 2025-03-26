@@ -21,6 +21,8 @@ const db = mysql.createConnection({
     database: process.env.DB_NAME,    // El nombre de la base de datos
 });
 
+
+
 // Conexión a la base de datos MySQL
 db.connect((err) => {
     if (err) {
