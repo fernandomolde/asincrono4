@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Usa la URL desde las variables de entorno
-const apiUrl = process.env.REACT_APP_API_URL || 'backend-eta-three-10.vercel.app';  
+const apiUrl = process.env.REACT_APP_API_URL || 'https://asincrono4back1.vercel.app';  
 
 function App() {
     const [users, setUsers] = useState([]);
