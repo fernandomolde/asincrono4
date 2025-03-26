@@ -33,17 +33,23 @@ db.connect((err) => {
 });
 
 
-app.get("/", (req, res) => {
-    // Devolver un objeto de ejemplo para confirmar que el servidor está funcionando
-    res.json({
-        message: "¡API está funcionando correctamente!",
-        exampleData: {
-            user_id: 1,
-            name: "Juan Pérez",
-            email: "juan.perez@example.com"
-        }
-    });
+app.get("/", async (req, res) => {
+    try {
+        // Devolver un objeto de ejemplo para confirmar que el servidor está funcionando
+        res.json({
+            message: "¡API está funcionando correctamente!",
+            exampleData: {
+                user_id: 1,
+                name: "Juan Pérez",
+                email: "juan.perez@example.com"
+            }
+        });
+    } catch (error) {
+        console.error("Error al acceder a la ruta raíz:", error);
+        res.status(500).json({ message: "Hubo un error al procesar la solicitud" });
+    }
 });
+
 
 // Rutas de la API
 
