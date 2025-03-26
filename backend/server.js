@@ -32,6 +32,19 @@ db.connect((err) => {
     }
 });
 
+
+app.get("/", (req, res) => {
+    // Devolver un objeto de ejemplo para confirmar que el servidor está funcionando
+    res.json({
+        message: "¡API está funcionando correctamente!",
+        exampleData: {
+            user_id: 1,
+            name: "Juan Pérez",
+            email: "juan.perez@example.com"
+        }
+    });
+});
+
 // Rutas de la API
 
 // Seleccionar usuarios (GET)
