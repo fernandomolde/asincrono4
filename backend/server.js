@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Configuración de CORS para permitir solicitudes desde tu frontend en producción
 const corsOptions = {
-    origin: process.env.REACT_APP_API_URL,// Cambia esto por tu URL de frontend en producción
+    origin: process.env.REACT_APP_API_URL || 'https://asincrono4back1.vercel.app', // Cambia esto por tu URL de frontend en producción
     methods: ["GET", "POST", "PUT", "DELETE"]  
 };
 app.use(cors(corsOptions));
